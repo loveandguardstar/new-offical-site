@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/centosl/centosl.github.io/master/favicon.ico"
+          type="image/x-icon"/>
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/new.css"/>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+<article class="pop-window">
+    <ul class="pop-lists">
+        <li v-for="list in headNavLists">
+            <a v-bind:href="list.address">
+                <div>
+                    <img :src="list.navImg">
+                </div>
+                <div class="pop-logo">{{list.logo}}</div>
+                <div>{{list.expression}}</div>
+                <div class="pop-line"></div>
+                <span class="line-1"></span>
+                <span class="line-2"></span>
+                <span class="line-3"></span>
+                <span class="line-4"></span>
+            </a>
+        </li>
+    </ul>
+</article>
+<script>
+    let vm = new Vue({
+        el: '.pop-window',
+        data: function () {
+            return {
+                headNavLists: [
+                    {navImg: 'images/首页.png', address:"index.html", logo: 'HOME', expression: 'Aisure'},
+                    {navImg: 'images/iphone.png', address:"index.html", logo: 'SERVICE', expression: '服务项目'},
+                    {navImg: 'images/图标.png', address:"index.html", logo: 'CASE', expression: '案例展示'},
+                    {navImg: 'images/contact.png', address:"index.html", logo: 'Teammate', expression: '伙伴同行'},
+                    {navImg: 'images/partner.png', address:"index.html", logo: 'CONTACT', expression: '联系我们'},
+                ],
+                supportLists: [
+                    '友情链接：', '站酷网', 'UEhtml', '优艺客', '68网页设计联盟', '一九八网络科技'
+                ],
+                sponsor: 'Aisure视觉设计. 湘icp备15005987(1/3)',
+                contentLeftImg: [
+                    {img: 'images/联系客服.png', font: '联系客服'},
+                    {img: 'images/提交需求.png', font: '提交需求'}
+                ]
+            }
+        }
+    })
+</script>
+</body>
+</html>

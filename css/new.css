@@ -1,0 +1,428 @@
+/*清除默认样式*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, ruby, section, summary, time, mark, audio, video, input {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-weight: normal;
+    vertical-align: baseline;
+}
+li {
+    list-style: none;
+}
+img {vertical-align:top; border:none}
+/*清除默认样式end*/
+/*全局样式*/
+.box {
+    min-width: 1200px;
+    background-image:url("../images/图层 0.png");
+}
+/*全局样式end*/
+/*导航条*/
+.header-nav {
+    position: relative;
+    min-width: 1200px;
+    height: 100px;
+    color: #ffffff;
+}
+.nav-left {
+    position:absolute;
+    width: 120px;
+    height: 100px;
+}
+.nav-left img {
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: 10px auto;
+    cursor: pointer;
+}
+.nav-right {
+    position: absolute;
+    right: 120px;
+    width: 700px;
+    font-size: 0;
+}
+.nav-list {
+    display: inline-block;
+    margin: 20px 8px 40px;
+    width: 120px;
+    height: 40px;
+    cursor: pointer;
+}
+.nav-list div {
+    float: left;
+    width: 46px;
+}
+.nav-list div img {
+    display: block;
+    width: 26px;
+    height: 26px;
+    margin: 5px auto;
+}
+.list-name {
+    float: right;
+    width: 70px;
+    height: 50px;
+    font-size: 12px;
+}
+.list-name li:nth-child(2) {
+    width: 20px;
+    height: 1px;
+    background: #8bca46;
+}
+.right-menu {
+    position: absolute;
+    right:0;
+    width: 120px;
+    height: 100px;
+}
+.right-menu img {
+    display: block;
+    margin: 10px auto;
+    box-shadow: -8px 8px 8px #fcfdfa;
+    cursor: pointer;
+}
+.nav-list:hover .shake-crazy img {
+    width: 200px;
+}
+/*疯狂发抖*/
+.shake-crazy:hover {
+    animation: shake 0.2s infinite;
+}
+@keyframes shake {
+    0%{transform: translate(0px, 0px) rotate(0deg)}
+    25%{transform: translate(-2px, -2px) rotate(2deg)}
+    50%{transform: translate(2px, 2px) rotate(-2deg)}
+    75%{transform: translate(2px, -2px) rotate(-2deg)}
+    100%{transform: translate(2px, 2px) rotate(2deg)}
+}
+/*疯狂发抖end*/
+/*导航条end*/
+/*主体层*/
+.content-box {
+    width: 100%;
+    height: 780px;
+}
+.content-box>section {
+    height: 100%;
+    margin: 0 120px;
+    /*background: #5d6160;*/
+}
+.main-content {
+    width: 900px;
+    height: 100%;
+    margin: 0 auto;
+}
+.main-content div:nth-child(1) {
+    width: 320px;
+    height: 220px;
+    padding-top: 90px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.main-content div:nth-child(1) img {
+    transition: all 1s ease-in-out;
+}
+.main-content div:nth-child(1) :hover {
+    transform: rotate(720deg) scale(0.6);
+}
+.main-content div img {
+    display: block;
+    margin: 0 auto;
+}
+.main-font {
+    text-align: center;
+    font-size: 0;
+    font-family: MicrosoftYaHei;
+}
+.main-font li:nth-child(2) {
+    width: 21px;
+    height: 21px;
+    margin-bottom: 14px;
+    border-radius: 50%;
+    background: #d92e48;
+}
+.main-font li {
+    display: inline-block;
+    font-size: 72px;
+    margin-left: 24px;
+}
+.main-font li:first-child {
+    font-weight: bolder;
+    color: #8bca46;
+}
+.main-font li:last-child {
+    -webkit-text-stroke:1px #8bca46;
+    color: transparent;
+}
+.main-content {
+    text-align: center;
+    color: #ffffff;
+}
+.expression-font {
+    margin: 40px auto 0;
+    width: 640px;
+    height: 87px;
+}
+.expression-font>p:nth-child(1) {
+    font-size: 20px;
+    color:white;
+}
+.expression-font>p:last-child {
+    margin-top: 14px;
+    font-size: 24px;
+    font-family: MicrosoftYaHei-Bold;
+}
+/*主体左层*/
+.content-left {
+    float: left;
+    width: 120px;
+    height: 100%;
+    /*background: red;*/
+}
+.content-left>div {
+    overflow: hidden;
+}
+.content-left>div:nth-child(1) {
+    width: 100px;
+    margin-top: 650px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.content-left>div:nth-child(2){
+    width: 100px;
+    margin-top:3px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.content-left img {
+    position: relative;
+    z-index: 1;
+}
+.content-left span {
+    display: inline-block;
+    width:70px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    text-indent: 6px;
+    color: #ffffff;
+}
+.content-left div:nth-child(1) span{
+    background: #8bca46;
+    transition: all 0.5s;
+}
+.content-left div:nth-child(2) span {
+    background: #606060;
+    transition: all 0.5s;
+}
+.content-left div:hover span{
+    margin-left: 0;
+}
+.move-box {
+    margin-left: -150px;
+}
+/*主体左层end*/
+/*主体右层*/
+.content-right {
+    float: right;
+    width: 120px;
+    height: 100%;
+    font-size: 0;
+}
+.content-right>div {
+    margin-top: 199px;
+    /*margin-left: 20px;*/
+}
+.content-right>div>div:nth-child(1) {
+    position:relative;
+    float: left;
+    width: 96px;
+    height: 210px;
+    font-size: 14px;
+    color: #8bca46;
+}
+.content-right>div>div:nth-child(1) p {
+    position: absolute;
+    bottom: 0;
+}
+.content-right>div>div:nth-child(2) {
+    float: left;
+}
+.content-right li {
+    width: 8px;
+    height: 8px;
+    margin-top: 30px;
+    border-radius: 50%;
+    background: #ffffff;
+    cursor:pointer;
+}
+.content-right li:last-child {
+    margin-left: -6px;
+}
+/*主体右层end*/
+/*主体层end*/
+/*底层*/
+.footer-layer {
+    width: 100%;
+    height: 53px;
+    /*background: yellowgreen;*/
+}
+.footer-layer ul {
+    float: left;
+    font-size: 0;
+}
+.footer-layer ul li {
+    position: relative;
+    display:inline-block;
+    /*width: 20px;*/
+    /*height: 14px;*/
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 12px;
+    color:#d2d2d2;
+    font-family: MicrosoftYaHei;
+}
+.footer-layer a {
+    text-decoration:none;
+    color:#d2d2d2;
+}
+.footer-layer p:hover {
+    cursor: pointer;
+}
+.footer-layer p {
+    float: right;
+    display: inline-block;
+    margin: 20px;
+    font-size: 12px;
+    color: #d2d2d2;
+}
+/*包裹君*/
+.footer-layer span {
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    background: #8bca46;
+}
+.line-1 {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width:0;
+    height:2px;
+}
+.line-2 {
+    position:absolute;
+    height:0;
+    width:2px;
+    top: 0;
+    right: 0;
+}
+.line-3 {
+    position:absolute;
+    width:0;
+    height:2px;
+    bottom: 0;
+    right: 0;
+}
+.line-4 {
+    position:absolute;
+    height:0;
+    width:2px;
+    bottom: 0;
+    left: 0;
+}
+.footer-layer ul li:hover {
+    cursor: pointer;
+}
+.footer-layer ul li:hover .line-1,.footer-layer ul li:hover .line-3{
+    width:100%;
+    height:2px;
+}
+.footer-layer ul li:hover .line-2,.footer-layer ul li:hover .line-4{
+    width:2px;
+    height:100%;
+}
+.pop-lists span {
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    background: #8bca46;
+}
+.pop-lists li a:hover {
+    cursor: pointer;
+}
+.pop-lists li a:hover .line-1,.pop-lists li a:hover .line-3{
+    width:100%;
+    height:2px;
+}
+.pop-lists li a:hover .line-2,.pop-lists li a:hover .line-4{
+    width:2px;
+    height:100%;
+}
+/*包裹君end*/
+/*底层end*/
+/*飞翔君*/
+.independent-sector {
+    font-size: 8px;
+    color: #8bca46;
+    text-align: center;
+    text-shadow: 1px 1px 5px red;
+    animation: flay 3s;
+    animation-fill-mode: forwards;
+}
+@keyframes flay {
+    0% {margin-top: 200px; font-size: 8px;}
+    50% {margin-top: 135px; font-size: 17px; color: red;}
+    100% {margin-top: 25px; font-size: 28px;}
+}
+/*飞翔君end*/
+/*菜单弹出*/
+.pop-window {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    z-index: 99;
+    background: black;
+}
+.pop-window ul {
+    width: 100%;
+    height: 100%;
+}
+.pop-window li {
+    display: inline-block;
+    width: 33%;
+    height: 50%;
+    text-align: center;
+}
+.pop-lists li a {
+    position: relative;
+    display: block;
+    width: 280px;
+    height: 190px;
+    padding-top: 30px;
+    margin: 0 auto;
+    color: #fff;
+    top: 23%;
+}
+.pop-logo {
+    font-size: 20px;
+}
+.pop-lists li a>div:nth-child(1) {
+    width: 150px;
+    height: 70px;
+    border-bottom: 1px dashed #4f4f55;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+.pop-line {
+    width: 20px;
+    height: 2px;
+    background: greenyellow;
+    margin: 10px auto;
+}
+.pop-lists img {
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+}
+/*菜单弹出end*/

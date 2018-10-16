@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/centosl/centosl.github.io/master/favicon.ico"
+          type="image/x-icon"/>
+    <title>首屏</title>
+    <!--<link type="text/css" ref="stylesheet" href="css/new.css"/>--> <!-- 顺序的重要性 -->
+    <link rel="stylesheet" type="text/css" href="css/new.css"/>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+<article class="box">
+    <nav class="header-nav">
+        <div class="nav-left">
+            <img src="images/Logo2.png">
+        </div>
+        <div class="nav-right">
+            <ul>
+                <li class="nav-list" v-for="list in headNavLists" >
+                    <div><img class="shake-crazy" :src="list.navImg"></div>
+                    <ul class="list-name">
+                        <li>{{list.logo}}</li>
+                        <li></li>
+                        <li>{{list.expression}}</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="right-menu">
+            <a href="home.html"><img src="images/right_menu.png"></a>
+        </div>
+    </nav>
+    <article class="content-box">
+        <div class="content-left">
+            <div v-for="(list,index) in contentLeftImg">
+                <p @mouseover="moveOut(index)" @mouseout="moveIn(index)"><img v-bind:src=list.img><span class="move-box">{{list.font}}</span></p>
+            </div>
+        </div>
+        <nav class="content-right">
+            <div>
+                <div>
+                    <p>上下滑动切换</p>
+                </div>
+                <div>
+                    <ul>
+                        <li><img src="images/椭圆3.png"></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li><img src="images/mouse.png"></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <section>
+            <div class="main-content">
+                <div>
+                    <img src="images/Logo1.png">
+                </div>
+                <ul class="main-font">
+                    <li>Aisure</li>
+                    <li></li>
+                    <li>视觉设计</li>
+                </ul>
+                <div class="expression-font">
+                    <p>更专业的设计开发团队</p>
+                    <p>打造您前所未想的高满意度网站</p>
+                </div>
+                <section class="independent-sector">
+                    www.aisure.cn
+                </section>
+            </div>
+        </section>
+    </article>
+    <footer class="footer-layer">
+        <ul>
+            <li  v-for="list in supportLists">
+                <a href="javascript:">{{list}}</a>
+                <span class="line-1"></span>
+                <span class="line-2"></span>
+                <span class="line-3"></span>
+                <span class="line-4"></span>
+            </li>
+        </ul>
+        <p>{{sponsor}}</p>
+    </footer>
+</article>
+<script>
+    let vm = new Vue({
+        el:'.box',
+        data: function() {
+            return {
+                headNavLists:[
+                    {navImg:'images/首页.png',logo:'HOME',expression:'Aisure'},
+                    {navImg:'images/iphone.png',logo:'SERVICE',expression:'服务项目'},
+                    {navImg:'images/图标.png',logo:'CASE',expression:'案例展示'},
+                    {navImg:'images/contact.png',logo:'Teammate',expression:'伙伴同行'},
+                    {navImg:'images/partner.png',logo:'CONTACT',expression:'联系我们'},
+                ],
+                supportLists: [
+                    '友情链接：','站酷网','UEhtml','优艺客','68网页设计联盟','一九八网络科技'
+                ],
+                sponsor: 'Aisure视觉设计. 湘icp备15005987(1/3)',
+                contentLeftImg:[
+                    {img:'images/联系客服.png',font:'联系客服'},
+                    {img:'images/提交需求.png',font:'提交需求'}
+                    ]
+            }
+        },
+        mounted: {
+
+        },
+        methods: {
+            moveOut: function (index) {
+                // clearInterval(timer);
+                // let aP = document.getElementsByClassName('move-box');
+                // var timer = setInterval(function(){
+                //     let pos = 0;
+                //     pos = parseInt(getStyle(aP[index], 'marginLeft'));
+                //     let iSpeed = (0-pos)/8;
+                //     iSpeed = iSpeed > 0 ? Math.ceil(iSpeed) : Math.floor(iSpeed);
+                //     if(pos === 0) {
+                //         clearInterval(timer);
+                //     }else{
+                //         aP[index].style.marginLeft = pos + iSpeed + 'px';
+                //     }
+                // },30)
+            },
+            moveIn: function (index) {
+                // console.log('222');
+                // let aP = document.getElementsByClassName('move-box');
+                // aP[index].style.marginLeft = -150 + 'px';
+            },
+        }
+    });
+    function getStyle(obj, attr) {
+        return obj.currentStyle ? obj.currentStyle[attr] : getComputedStyle(obj, null)[attr];
+    }
+    // let oFont = document.getElementsByClassName('independent-sector')[0];
+    // function move() {
+    //     clearInterval(timer);
+    //     let fNum =8;
+    //     let hNum = 14;
+    //      var timer = setInterval(function(){
+    //          fNum +=1;
+    //          hNum +=0.5;
+    //          oFont.style.fontSize = fNum + 'px';
+    //          oFont.style.bottom = hNum+ '%';
+    //          console.log('333');
+    //          if(fNum === 28) {
+    //              clearInterval(timer)
+    //          }
+    //     }, 100);
+    // }
+    // window.onload = function () {
+    //    move();
+    // };
+    // let getStyle = function (obj, attr) {
+    //     return obj.currentStyle ? obj.currentStyle[attr] : getComputedStyle(obj, null)[attr]
+    // };
+
+</script>
+</body>
+</html>
